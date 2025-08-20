@@ -1,0 +1,10 @@
+.intro {
+    color: #2c3e50; /* Cor do texto */
+    text-align: center; /* Alinhamento central */
+}
+
+.descricao {
+    color: #16a085; /* Outra cor para diferenciar */
+    text-align: justify; /* Alinhamento justificado */
+
+}

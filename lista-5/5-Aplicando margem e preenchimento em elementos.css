@@ -1,0 +1,21 @@
+.caixa {
+    border: 2px solid #444; /* Borda: Espessura, Estilo, Cor*/
+    border-radius: 10px; /* Arredondamento das bordas*/
+    box-sizing: border-box; /*navegador calcula o tamanho de um elemento*/
+    flex-wrap: wrap; /*Quebra de linha*/
+    padding: 20px; /* Espaço interno*/
+    margin: 30px; /* Espaço ao redor do elemento*/
+    background-color: #f0f0f0; /*Cor de Fundo do Elemento*/
+    font-family: Arial, sans-serif; /*Fonte Arial e fonte reserva sem serifa*/
+    text-align: justify; /* Título Centralizado*/
+    width: 50%; /* Elemento ocupará 50% da largura do Pai*/
+}
+
+@media (max-width: 600px) {
+
+    /* Responsivo para telas menores*/
+    .coluna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

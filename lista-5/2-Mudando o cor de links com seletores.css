@@ -1,0 +1,29 @@
+body ul li a {
+
+    a {
+        transition: color 0.3s ease;
+        /*Suavização na transição*/
+    }
+
+    /* Estado normal (não visitado) */
+
+    a:link {
+        color: #1e90ff;
+        /* azul */
+        text-decoration: none;
+    }
+
+    /* Estado visitado */
+    a:visited {
+        color: #6a5acd;
+        /* roxo */
+    }
+
+    /* Estado hover (quando o mouse passa por cima) */
+    a:hover {
+        color: #ff7b00;
+        /* laranja */
+        text-decoration: underline;
+
+    }
+}

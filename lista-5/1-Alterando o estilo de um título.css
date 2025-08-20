@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(47, 79, 79);
+    /* Cor de Fundo da página Cinza */
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    /* Estilização do Título*/
+}

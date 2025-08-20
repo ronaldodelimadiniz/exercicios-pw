@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif; /*Fonte Arial e fonte reserva sem serifa*/
+    margin: 20px; /* Espaço ao redor do elemento*/
+    display: flex; /* Coluna lado a lado*/
+    justify-content: space-between; /*Alinhamento horizontal justificado*/
+    flex-wrap: wrap; /*Quebra de linha*/
+
+}
+
+@media (max-width: 600px) { /* Responsivo para telas menores*/
+    .coluna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.coluna {
+    width: 45%; /* Elemento ocupará 45% da largura do Pai*/
+    padding: 20px; /* Espaço interno*/
+    border: 3px solid #333; /* Borda: Espessura, Estilo, Cor*/
+    border-radius: 10px; /* Arredondamento das bordas*/
+    box-sizing: border-box;/*navegador calcula o tamanho de um elemento*/
+}
+
+h2 {
+    text-align: center; /* Título Centralizado*/
+}
+
+p {
+    text-align: justify;/* Parágrafo justificado*/
+}

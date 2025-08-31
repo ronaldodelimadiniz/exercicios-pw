@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    height: 100vh;
+    background-color: #e7e5ec;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffff;
+}
+
+image {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+header {
+    background: url(https://images.pexels.com/photos/7293752/pexels-photo-7293752.jpeg) no-repeat center/cover;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Sections Gerais */
+.section {
+    padding: 2rem;
+    border-bottom: 3px solid;
+    border-image-slice: 0.9;
+    border-image-source: linear-gradient(90deg, #ff9100, #1c0d6a, #438b86);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/*About */
+.about .content {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.about .image-content {
+    background: url(https://images.pexels.com/photos/7293752/pexels-photo-7293752.jpeg) no-repeat center/cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px #ff9100;
+    float: left;
+}
+
+.about .description-content {
+    margin-left: 180px;
+    padding: 2rem;
+    color: #000;
+}
+
+/*SKILLS */
+.skills {
+    text-align: center;
+    background-color: #ffff;
+    color: #000;
+}
+
+.skills ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.skills ul li {
+    display: inline-block;
+    border: 2px solid #ff9100;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin: 1rem;
+    background: url(https://images.pexels.com/photos/7293752/pexels-photo-7293752.jpeg) no-repeat center/cover;
+    color: #ffff;
+     font-weight: bold;
+}
+
+.skills .skills:hover {
+    box-shadow: 0 0 10px 4px #ff9100;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/*PROJECTS */
+.projects {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+.projects .project {
+    background: url(https://images.pexels.com/photos/7293752/pexels-photo-7293752.jpeg) no-repeat center/cover;
+    color: #ffff;
+    max-width: 350px;
+    width: 40%;
+    margin: 1rem;
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2px #ff9100;
+    vertical-align: top;
+}
+
+.projects .project:hover {
+    box-shadow: 0 0 10px 4px #ff9100;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/*CONTACTS */
+.contacts {
+    background: url(https://images.pexels.com/photos/7293752/pexels-photo-7293752.jpeg) no-repeat center/cover;
+    text-align: center;
+    color: #ffffff;
+    text-shadow:0 0 0 2px #000;
+}
+
+.contacts form {
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.contacts label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.contacts input {
+    all: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    background-color: #ffff;
+    padding: 0.6rem 1rem;
+    color: #000;
+    border-radius: 6px;
+}
+
+.contacts input[type="submit"] {
+    background-color: #ff9100;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacts input[type="submit"]:hover {
+    background-color: #ff9100;
+}
+
+footer {
+    padding: 4rem;
+    background: #000;
+    text-align: center;
+    color: #ffff;
+    font-size: 1.2rem;
+}

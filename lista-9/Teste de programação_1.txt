@@ -1,0 +1,363 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../assets/images/bg-2.png");
+    background-size: cover;/* Preenche a tela */
+        background-repeat: no-repeat;/* Não repete a imagem */
+        background-position: center;/* Centraliza */
+        background-attachment: fixed;/* Fixa o fundo ao rolar */
+    
+}
+
+header {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+ background-color: rgba(255, 255, 255, 0.85); /* branco translúcido */
+    backdrop-filter: blur(6px); /* Efeito de desfoque moderno */
+
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    main {
+        width: 100%;
+        max-width: 1140px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 800px 320px;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        padding: 0 20px;
+         background-color: rgba(255, 255, 255, 0.85); /* branco translúcido */
+    backdrop-filter: blur(6px); /* Efeito de desfoque moderno */
+      background: transparent;          /* nada de plano branco */
+    }
+}
+
+.grid-top {
+    grid-column: 1 / span 2;
+    /* ocupa as 2 colunas */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.grid-left {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+    color: #e60073;
+    margin-bottom: 8px;
+}
+
+.grid-right {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+footer {
+    width: 100%;
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+     background-color: rgba(255, 255, 255, 0.85); /* branco translúcido */
+    backdrop-filter: blur(6px); /* Efeito de desfoque moderno */
+}
+
+@media (max-width: 1020px) {
+    main {
+        grid-template-columns: 1fr;
+        /* empilha tudo no mobile */
+    }
+
+    .grid-top {
+        grid-column: 1;
+    }
+}
+
+/* Pagina 2 */
+
+.page-two {
+    width: 100%;
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna */
+    grid-template-rows: 100px auto;
+    /* 2 linhas */
+    gap: 30px;
+}
+
+/* Linha 1 (ex.: banner, título grande, chamada) */
+.p2-row-top {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.p2-row-top .headline {
+    font-size: 2rem;
+    color: #111;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.p2-row-top .subhead {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Linha 2 (ex.: conteúdo, cards, texto longo, lista, etc.) */
+.p2-row-bottom {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.p2-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.p2-card h3 {
+    color: #e60073;
+    margin-bottom: 8px;
+}
+
+.p2-cta {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.p2-cta:hover {
+    background: #e60073;
+}
+
+/* Responsivo: mantém 1 coluna; só ajusta espaçamentos se quiser */
+@media (max-width: 600px) {
+    .page-two {
+        margin: 24px auto;
+        gap: 20px;
+    }
+
+    .p2-row-top {
+        padding: 24px;
+    }
+
+    .p2-row-bottom {
+        padding: 20px;
+    }
+}
+
+/* Pagina 3 */
+
+.page-three {
+    width: 100%;
+    max-width: 1140px;
+    /* conforme solicitado */
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna */
+    grid-template-rows: auto auto;
+    /* 2 linhas */
+    gap: 30px;
+
+}
+
+/* Linha 1: destaque/topo */
+.p3-row-top {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.p3-row-top .headline {
+    font-size: 2rem;
+    color: #111;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.p3-row-top .subhead {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Linha 2: conteúdo */
+.p3-row-bottom {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.p3-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.p3-card h3 {
+    color: #e60073;
+    margin-bottom: 8px;
+}
+
+.p3-cta {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.p3-cta:hover {
+    background: #e60073;
+}
+
+/* Responsivo: mantém 1 coluna; ajusta espaçamentos */
+@media (max-width: 600px) {
+    .page-three {
+        margin: 24px auto;
+        gap: 20px;
+    }
+
+    .p3-row-top {
+        padding: 24px;
+    }
+
+    .p3-row-bottom {
+        padding: 20px;
+    }
+}
+
+
+/* Estilo base */
+button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* BOTÃO ENVIAR — azul principal */
+#enviarButton {
+    background: linear-gradient(135deg, #007bff, #0056d6);
+    color: #fff;
+}
+
+/* Hover do ENVIAR */
+#enviarButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #339cff, #006eff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Desabilitado */
+#enviarButton:disabled {
+    background: #b0c4de;
+    color: #f0f0f0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* BOTÃO CANCELAR — azul mais escuro */
+#cancelarButton {
+    background: linear-gradient(135deg, #004b8d, #003366);
+    color: #fff;
+}
+
+/* Hover do CANCELAR */
+#cancelarButton:hover {
+    background: linear-gradient(135deg, #0056b3, #002b55);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 64, 128, 0.4);
+}
+
+/* Foco (acessibilidade e estética) */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

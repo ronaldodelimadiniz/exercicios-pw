@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="left-group">
+        <img src="../assets/images/logo.png" alt="Logo Craftsy" class="logo">
+        <nav class="menu-left">
+          <ul>
+            <li><a href="#">SMARTPHONES</a></li>
+            <li><a href="#">TABLETS</a></li>
+            <li><a href="#">COMPUTADORES</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="right-group">
+        <nav class="menu-right">
+          <ul>
+            <li><a href="./login.html">LOGIN</a></li>
+            <li><a href="./registro.html">REGISTRAR</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Página 2 -->
+  <main class="page-two">
+    <!-- Linha 1 -->
+    <section class="p2-row-top">
+      <h2 class="headline">BEM-VINDO</h2>
+
+    </section>
+
+    <!-- Linha 2 -->
+    <section class="p2-row-bottom">
+      <form id="loginForm" method="POST">
+        <div class="form-group">
+          <label for="email"><strong>Email</strong></label>
+          <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+          <span class="obrigatorio">Obrigatório</span>
+        </div>
+
+        <div class="form-group">
+          <label for="password"><strong>Senha</strong></label>
+          <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+          <span class="obrigatorio">Obrigatório</span>
+        </div>
+
+        <div class="links">
+
+          <input type="checkbox" id="lembrar" name="lembrar" value="Lembrar de mim">
+          <label for="lembrar">Lembrar de mim</label>
+          <br>
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+
+      </form>
+      <p id="mensagem-erro" class="erro"></p>
+
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Craftsy. Todos os direitos reservados.
+  </footer>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

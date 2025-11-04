@@ -1,0 +1,240 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../assets/images/bg-2.png");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  background-position: top left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111; /* textos pretos */
+  line-height: 1.4;
+}
+
+/* =========================
+   HEADER (laranja Craftsy)
+   ========================= */
+header {
+  background: #f24a1d;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.menu-left ul,
+.menu-right ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-right ul { gap: 20px; }
+
+.menu-left a,
+.menu-right a {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-left a:hover,
+.menu-right a:hover {
+  color: #003a52;
+  transform: scale(1.05);
+}
+
+/* =========================
+   PÁGINA 2 (GRID PRINCIPAL)
+   ========================= */
+.page-two {
+  width: 100%;
+  max-width: 1140px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-rows: 100px auto;
+  gap: 30px;
+  background: transparent;
+}
+
+.p2-row-top {
+  background: transparent;
+  padding: 24px;
+  text-align: center;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+.p2-row-bottom {
+  background: transparent;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left; /* garante alinhamento à esquerda */
+}
+
+/* Cada grupo (label, input, obrigatório) */
+.form-group {
+  display: flex;
+  flex-direction: column; /* um embaixo do outro */
+  align-items: flex-start; /* tudo alinhado à esquerda */
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+label {
+  font-weight: 600;
+  color: #111;
+  text-align: left;
+  margin: 0;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #ffffff; /* campo branco */
+  color: #000;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+input:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 6px #00aaffaa;
+  outline: none;
+}
+
+/* Texto "Obrigatório" logo abaixo */
+.obrigatorio {
+  color: #ff5555;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* =========================
+   CHECKBOX + BOTÃO
+   ========================= */
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.links input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #00aaff;
+  cursor: pointer;
+}
+
+.links label {
+  color: #111;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Botão "Entrar" */
+.btn {
+  background: linear-gradient(135deg, #007bff, #005ad6);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #005ad6, #004b9d);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   MENSAGEM DE ERRO
+   ========================= */
+.erro {
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  color: #111;
+  margin: 40px 0 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+@media (max-width: 600px) {
+  .page-two {
+    margin: 24px auto;
+    gap: 20px;
+  }
+
+  .p2-row-bottom {
+    padding: 20px;
+    max-width: 90%;
+  }
+}

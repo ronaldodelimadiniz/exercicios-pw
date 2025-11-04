@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+    <h1>Dashboard Flexbox</h1>
+  </header>
+
+  <main class="layout">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <nav>
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="#">Visão Geral</a></li>
+          <li><a href="#">Relatórios</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#">Configurações</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <section class="content">
+      <h2 class="content-title">Painel de Indicadores</h2>
+
+      <div class="cards-container">
+        <!-- Cartão com DESTAQUE -->
+        <div class="card card-destaque">
+          <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=400&q=60" alt="Resumo Geral">
+          <h3>Resumo Geral</h3>
+          <p>Indicadores principais do sistema.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=400&q=60" alt="Vendas">
+          <h3>Vendas</h3>
+          <p>Últimos 30 dias de vendas.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=400&q=60" alt="Usuários Ativos">
+          <h3>Usuários Ativos</h3>
+          <p>Quantidade de acessos hoje.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=60" alt="Suporte">
+          <h3>Suporte</h3>
+          <p>Chamados em aberto.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=400&q=60" alt="Desempenho">
+          <h3>Desempenho</h3>
+          <p>Estado dos servidores.</p>
+        </div>
+
+        <!-- Missão extra: cartão que NÃO encolhe nunca -->
+        <div class="card card-no-shrink">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=400&q=60" alt="Card Fixo">
+          <h3>Card Fixo</h3>
+          <p>Este cartão não encolhe (flex-shrink: 0).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 - Dashboard Flexbox | Desenvolvido para treino de Flex Items</p>
+  </footer>
+</body>
+
+</html>

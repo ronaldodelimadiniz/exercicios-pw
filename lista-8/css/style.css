@@ -1,0 +1,184 @@
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== CABEÇALHO ========== */
+.header {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o título */
+}
+
+.header h1 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* ========== LAYOUT PRINCIPAL ========== */
+.layout {
+  flex: 1;
+  display: flex; /* Barra lateral + conteúdo lado a lado */
+  min-height: 0;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 24px 16px;
+
+  flex: 0 0 200px; /* largura fixa */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.sidebar a:hover {
+  background-color: #374151;
+  transform: translateX(3px);
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+.content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-title {
+  font-size: 22px;
+}
+
+/* ========== CONTAINER DOS CARDS ========== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* ========== CARDS ========== */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  /* Flex items */
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+/* Imagens dentro dos cards */
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Efeito hover (botão interativo) */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  background-color: #e5f2ff;
+}
+
+/* ========== CARTÃO DE DESTAQUE ========== */
+.card-destaque {
+  flex-grow: 2;
+  flex-basis: 300px;
+  order: -1;
+  align-self: center;
+  border: 2px solid #2563eb;
+}
+
+/* ========== CARTÃO QUE NÃO ENCOLHE ========== */
+.card-no-shrink {
+  flex-shrink: 0;
+  min-width: 220px;
+}
+
+/* ========== RODAPÉ ========== */
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 0 0 auto;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+  }
+
+  .sidebar li {
+    margin-right: 8px;
+  }
+
+  .card img {
+    height: 100px;
+  }
+}

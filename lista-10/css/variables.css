@@ -1,0 +1,31 @@
+:root {
+    /* Fundo da página */
+    --page-bg: #e5e7eb;
+
+    /* Calculadora */
+    --calc-bg: #111827;
+    --calc-text: #e5e7eb;
+
+    /* Visor */
+    --screen-bg: #d7e3d7;
+    --screen-border: #1f2937;
+    --screen-text: #000000;
+
+    /* Botões */
+    --button-bg: #374151;
+    --button-hover: #4b5563;
+    --button-active: #1f2937;
+    --button-shadow: #020617;
+
+    /* Labels */
+    --label-yellow: #facc15;
+    --label-red: #f43f5e;
+    --label-gray: #9ca3af;
+
+    /* Botões especiais */
+    --red-button: #ef4444;
+
+    /* Sombras */
+    --shadow-hover: rgba(0, 0, 0, 0.25);
+    --shadow-pressed: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,290 @@
+@import url('./variables.css');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--page-bg);
+}
+
+/* === CALCULADORA === */
+.calc {
+  width: 320px;
+  padding: 32px 22px 26px 22px;
+  border-radius: 26px;
+  background: var(--calc-bg);
+  color: var(--calc-text);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* === TÍTULOS === */
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.sub {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+.edition {
+  text-align: right;
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+/* === VISOR DE DUAS LINHAS === */
+.screen {
+  background: var(--screen-bg);
+  border: 2px solid var(--screen-border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin: 10px 0 18px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.screen-upper {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #444;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.screen-lower {
+  font-size: 1.4rem;
+  text-align: right;
+  color: var(--screen-text);
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* === GRID CIENTÍFICO === */
+.sci-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:
+    18px          /* 1: legendas */
+    42px          /* 2: botões redondos */
+    repeat(4, 34px); /* 3–6: botões científicos */
+  column-gap: 10px;
+  row-gap: 14px;
+  margin-bottom: 8px;
+  transform: translateY(-4px);
+}
+
+/* === LEGENDAS DE TOPO === */
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  align-self: end;
+}
+.label.shift { color: var(--label-yellow); grid-column: 1; grid-row: 1; }
+.label.alpha { color: var(--label-red);    grid-column: 2; grid-row: 1; }
+
+.mode-group {
+  grid-column: 5;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 0.9;
+}
+.mode-group .clr {
+  color: var(--label-yellow);
+  font-size: 0.65rem;
+  margin-bottom: -2px;
+}
+.mode-group .mode {
+  color: var(--label-gray);
+  font-size: 0.75rem;
+}
+.label.on {
+  color: var(--label-blue);
+  grid-column: 6;
+  grid-row: 1;
+}
+
+/* === BOTÕES REDONDOS (SHIFT, ALPHA, MODE, ON) === */
+.key-top {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: var(--button-bg);
+  box-shadow: 0 2px 0 var(--button-shadow);
+}
+.shift-btn { grid-column: 1; grid-row: 2; }
+.alpha-btn { grid-column: 2; grid-row: 2; }
+.mode-btn  { grid-column: 5; grid-row: 2; }
+.on-btn    { grid-column: 6; grid-row: 2; }
+
+/* === SETAS DIRECIONAIS === */
+.nav-pad {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left . right"
+    ". down .";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 60px;
+  height: 60px;
+  justify-items: center;
+  align-items: center;
+}
+.nav-btn.circle {
+  background: var(--button-bg);
+  border: none;
+  color: var(--calc-text);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+}
+.nav-btn[data-nav="up"]    { grid-area: up;    align-self: end; }
+.nav-btn[data-nav="left"]  { grid-area: left; }
+.nav-btn[data-nav="right"] { grid-area: right;}
+.nav-btn[data-nav="down"]  { grid-area: down; align-self: start; }
+
+/* === BOTÕES CIENTÍFICOS === */
+.key-sci {
+  background: var(--button-bg);
+  color: var(--calc-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  height: 34px;
+}
+
+/* POSIÇÃO DOS BOTÕES CIENTÍFICOS */
+.xinv        { grid-row: 3; grid-column: 1; }
+.ncr         { grid-row: 3; grid-column: 2; }
+.pol         { grid-row: 3; grid-column: 5; }
+.cube        { grid-row: 3; grid-column: 6; }
+
+.abfrac      { grid-row: 4; grid-column: 1; }
+.sqrt        { grid-row: 4; grid-column: 2; }
+.pow2        { grid-row: 4; grid-column: 3; }
+.pow         { grid-row: 4; grid-column: 4; }
+.log         { grid-row: 4; grid-column: 5; }
+.ln          { grid-row: 4; grid-column: 6; }
+
+.neg         { grid-row: 5; grid-column: 1; }
+.dms         { grid-row: 5; grid-column: 2; }
+.hyp         { grid-row: 5; grid-column: 3; }
+.sin         { grid-row: 5; grid-column: 4; }
+.cos         { grid-row: 5; grid-column: 5; }
+.tan         { grid-row: 5; grid-column: 6; }
+
+.rcl         { grid-row: 6; grid-column: 1; }
+.eng         { grid-row: 6; grid-column: 2; }
+.paren-open  { grid-row: 6; grid-column: 3; }
+.paren-close { grid-row: 6; grid-column: 4; }
+.comma       { grid-row: 6; grid-column: 5; }
+.mplus       { grid-row: 6; grid-column: 6; }
+
+/* === LABELS AMARELAS (SHIFT) === */
+.mask-label {
+  color: var(--label-yellow);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  pointer-events: none;
+  line-height: 1;
+  transform: translateY(-10px);
+  opacity: 0.95;
+}
+
+/* Linha 3 */
+.ml-xfact    { grid-row: 3; grid-column: 1; }
+.ml-npr      { grid-row: 3; grid-column: 2; }
+.ml-rec      { grid-row: 3; grid-column: 5; }
+.ml-cuberoot { grid-row: 3; grid-column: 6; }
+
+/* Linha 4 */
+.ml-dc       { grid-row: 4; grid-column: 1; }
+.ml-xroot    { grid-row: 4; grid-column: 4; }
+.ml-tenx     { grid-row: 4; grid-column: 5; }
+.ml-ex       { grid-row: 4; grid-column: 6; }
+
+/* Linha 5 */
+.ml-left5    { grid-row: 5; grid-column: 2; }
+.ml-sininv   { grid-row: 5; grid-column: 4; }
+.ml-cosinv   { grid-row: 5; grid-column: 5; }
+.ml-taninv   { grid-row: 5; grid-column: 6; }
+
+/* Linha 6 */
+.ml-sto      { grid-row: 6; grid-column: 1; }
+.ml-left6    { grid-row: 6; grid-column: 2; }
+.ml-colon    { grid-row: 6; grid-column: 5; }
+.ml-mminus   { grid-row: 6; grid-column: 6; }
+
+/* === TECLADO PRINCIPAL === */
+.main-keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+.key-main {
+  background: var(--button-bg);
+  color: var(--calc-text);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 0 var(--button-shadow);
+}
+.key-main.ac,
+.key-main.del {
+  color: var(--red-button);
+  font-weight: 700;
+}
+.key-main.equal {
+  font-weight: 700;
+}
+
+/* === INTERAÇÃO (hover/click) === */
+button {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.key-main:hover,
+.key-sci:hover,
+.key-top:hover,
+.nav-btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px var(--shadow-hover);
+}
+.key-main:active,
+.key-sci:active,
+.key-top:active,
+.nav-btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 3px var(--shadow-pressed);
+  background: var(--button-active);
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 480px) {
+  .calc {
+    transform: scale(0.95);
+  }
+}

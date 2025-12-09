@@ -1,101 +1,79 @@
-🚀 Tecnologias Utilizadas
+# 📘 Curso Técnico em Desenvolvimento de Sistemas – ETEC  
+### Site institucional completo desenvolvido em HTML, CSS e JavaScript
 
-HTML5 – Estrutura semântica das páginas
+Bem-vindo ao repositório do **site oficial do Curso Técnico em Desenvolvimento de Sistemas da ETEC**.  
+Este projeto apresenta um portal moderno, responsivo e visualmente dinâmico, com páginas estruturadas para divulgar o curso, infraestrutura, corpo docente, matriz curricular e informações gerais.
 
-CSS3 – Design responsivo, animações e componentes visuais
+---
 
-JavaScript (ES6) – Interações, animações, menu mobile, modal e slider
+## 🚀 Tecnologias Utilizadas
 
-Google Fonts – Inter
+- **HTML5** – Estrutura semântica das páginas  
+- **CSS3** – Design responsivo, animações e componentes visuais  
+- **JavaScript (ES6)** – Interações, animações, menu mobile, modal e slider  
+- **Google Fonts (Inter)**  
+- **Lucide Icons** – Ícones leves e modernos  
+- **Design Responsivo** – Compatível com desktop, tablet e mobile  
 
-Lucide Icons – Ícones leves e modernos
+---
 
-Design Responsivo – Compatível com desktop, tablet e mobile
+## 🧩 Funcionalidades
 
-🧩 Funcionalidades
-✨ Header Animado
+- Header animado com mudança ao rolar a página  
+- Menu mobile com transição lateral  
+- Hero com estatísticas e cards flutuantes  
+- Imagem destacada com efeitos visuais  
+- Sobre o Curso com cards interativos  
+- Botões de chamada para ação (CTA)  
+- Modal detalhando informações dos professores  
+- Slider de depoimentos  
+- Footer com ano atualizado automaticamente  
+- Projeto totalmente responsivo  
 
-Mudança de cor ao rolar a página
 
-Efeito glow no logo
+---
+## 📁 Estrutura de Pastas
+```md
 
-Menu responsivo com transição lateral
-
-Realce automático da página ativa
-
-🎯 Hero Section
-
-Estatísticas animadas do curso
-
-Cards flutuantes com animação
-
-Imagem de laboratório com destaque visual
-
-Título com gradiente dinâmico
-
-📚 Sobre o Curso
-
-Cards com animações hover
-
-Explicação sobre o curso, perfil do aluno e objetivos
-
-Botões de CTA: Inscreva-se Agora e Conheça o Curso
-
-🧑‍🏫 Corpo Docente
-
-Cards com botão “Saiba mais”
-
-Modal exibindo informações completas do professor
-
-💬 Depoimentos (Slider)
-
-Navegação entre cards
-
-Layout fluido e responsivo
-
-📩 Página de Contato
-
-Formulário simples e funcional
-
-🦶 Footer Completo
-
-Links rápidos
-
-Informações institucionais
-
-Ano dinâmico atualizado via JavaScript
-
-📁 Estrutura de Pastas
 /
 ├── index.html
 ├── paginas/
-│   ├── matriz.html
-│   ├── infra.html
-│   ├── docente.html
-│   ├── depoimentos.html
-│   └── contato.html
+│ ├── matriz.html
+│ ├── infra.html
+│ ├── docente.html
+│ ├── depoimentos.html
+│ └── contato.html
 ├── css/
-│   ├── home.css
-│   └── demais arquivos CSS...
+│ ├── base.css
+│ ├── contato.css
+│ ├── depoimentos.css
+│ ├── docente.css
+│ ├── home.css
+│ ├── infra.css
+│ └── matriz.css
 ├── javaScript/
-│   └── script.js
+│ └── script.js
 ├── assets/
-│   ├── images/
-│   └── icons/
+│ ├── fonts/
+│ ├── icons/
+│ └── images/
 └── README.md
 
-🔧 Configurações do JavaScript
+```
 
-O arquivo script.js controla:
+---
 
-Modal de professores
+## 🔧 Funcionalidades do JavaScript
 
-Menu responsivo
+- Adição automática do ano no footer  
+- Modificação do header ao rolar a página  
+- Menu mobile com abertura e fechamento animados  
+- Modal de professores com conteúdo dinâmico  
+- Slider de depoimentos com navegação  
+- Recriação dos ícones Lucide ao carregar o DOM  
 
-Slider de depoimentos
+---
 
-Header dinâmico
 
-Inserção automática do ano no footer
 
-Recriação dos ícones Lucide
+
